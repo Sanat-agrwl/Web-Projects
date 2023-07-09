@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: aqua;
+}
+
+h1 {
+    background-color: yellow;
+    text-align: center;
+    font-size: 1.75rem;
+    padding: 18px 0;
+}
+
+.container {
+    display: flex;
+    gap: 35px;
+    padding: 30px;
+}
+
+.box {
+    width: 550px;
+}
+
+.box input {
+    height: 46px;
+    width: 100%;
+    outline: none;
+    font-size: 1.07rem;
+    padding: 0 17px;
+    margin: 10px 0 20px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.box button {
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #fff;
+    background: #5372F0;
+    transition: 0.2s ease;
+}
+
+#output {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.current {
+    color: #fff;
+    background: #5372F0;
+    border-radius: 5px;
+    padding: 20px 70px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.current h2 {
+
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+#output h6 {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.current .icon {
+    text-align: center;
+}
+
+.current .icon img {
+    max-width: 120px;
+    margin-top: -15px;
+}
+
+.current .icon h6 {
+    margin-top: -10px;
+    text-transform: capitalize;
+}
+
+.forecast h2 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+.weather-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    color: #fff;
+    padding: 18px 16px;
+    list-style: none;
+    width: calc(100% / 5);
+    background: #6C757D;
+    border-radius: 5px;
+}
+
+.card h3 {
+
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.card img {
+    max-width: 70px;
+    margin: 5px 0 -12px 0;
+}

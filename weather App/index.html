@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Weather App</h1>
+  <div class="container">
+    <div class="box">
+      <h2>Enter a city Name</h2>
+      <form id="form">
+        <input type="text" id="city" placeholder="Delhi,Mumbai">
+        <button id="search" type="submit">search</button>
+      </form>
+
+      <div>
+        <br><br><br>
+        <h2>Try These</h2>
+        <br><br>
+        <button id="btn1">Mumbai</button>
+        <br><br><br>
+        <button id="btn2"> Delhi</button>
+        <br><br><br>
+        <button id="btn3">Bangalore</button>
+      </div>
+    </div>
+
+    <div id="output">
+      <div class="current">
+        <div class="details">
+          <h2 id="head"></h2>
+          <h6></h6>
+          <h6></h6>
+          <h6></h6>
+        </div>
+      </div>
+      <div class="forecast">
+        <h2>5-Day Forecast</h2>
+        <ul class="weather-cards">
+          <li class="card">
+            <h3></h3>
+            <h6></h6>
+            <h6></h6>
+            <h6></h6>
+          </li>
+          <li class="card">
+            <h3></h3>
+            <h6></h6>
+            <h6></h6>
+            <h6></h6>
+          </li>
+          <li class="card">
+            <h3></h3>
+            <h6></h6>
+            <h6></h6>
+            <h6></h6>
+          </li>
+          <li class="card">
+            <h3></h3>
+            <h6></h6>
+            <h6></h6>
+            <h6></h6>
+          </li>
+          <li class="card">
+            <h3></h3>
+            <h6></h6>
+            <h6></h6>
+            <h6></h6>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+
+</html>
