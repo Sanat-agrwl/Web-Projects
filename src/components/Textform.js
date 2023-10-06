@@ -1,47 +1,56 @@
 import React,{useState} from 'react'
 
+export default function Textform() {
+  const [Text, setText] = useState('');
 
+  const handleUppercaseClick=()=>{
+    console.log("uppercase clicked");
+    let NewText=Text.toUpperCase();
 
-export default function Textform(props) {
-  
-  
-  const [text,setText]=useState("");
-  const handleUPclick= ()=>{
-    let newText=text.toUpperCase();
-    setText(newText);
+    setText(NewText);
 
   }
 
-  const handleLowclick =()=>{
-    setText(text.toLowerCase());
+  const handleCopy = () => {
+    navigator.clipboard.writeText(Text); 
+    alert("Copied");
+}
+  const handleLowercaseClick=()=>{
+    console.log("Lowercase clicked");
+    let Newtext1=Text.toLowerCase();
+
+    setText(Newtext1);
   }
-  const handleCLear =()=>{
-   
+
+  const handleOnChange=(event)=>{
+    console.log("ON change");
+    setText(event.target.value)
+  }
+
+  const handleclear=()=>{
+    console.log("clear text");
     setText("");
   }
-  const handleOnchange= (event)=>{
-     setText(event.target.value);
-  }
-  
   return (
     <>
-    <div className="container">
-      <h1>{props.heading}</h1>
-    <textarea className="my-3 form-control"  id="floatingTextarea2"  onChange={handleOnchange} row ="8" value={text}></textarea>
-    <button className=" my-3 btn btn-primary" onClick={handleUPclick}>convert Uppercase</button>
-    <button className=" my-3 mx-3 btn btn-primary" onClick={handleLowclick}>convert lowercase</button>
-    <button className=" my-3 mx-3 btn btn-primary" onClick={handleCLear}>Clear</button>
-  </div>
+<div className="mb-3">
+  <textarea class="form-control" value={Text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+</div>
+<button className="btn btn-primary mx-3" onClick={handleUppercaseClick}>Convert to Uppercase</button>
+<button className="btn btn-primary mx-3" onClick={handleLowercaseClick}>Convert to Lowercase</button>
+<button className="btn btn-primary mx-3" onClick={handleCopy}>Copy To Clipboard</button>
+<button className="btn btn-danger mx-3" onClick={handleclear}>Clear Text</button>
+<div className='container my-3 px-3'>
+<h2>Text Report</h2>
+<p>Character count :{Text.length}</p>
+<p>Minutes required to read :{0.008 * Text.length}</p>
+</div>
+<div className='container'>
+  <h3>Preview</h3>
+  <div className='container border '><p>{Text}</p></div>
+ 
+</div>
 
-  <div className="container my-3">
-    <h1>Your Text Summary</h1>
-    <p>{text.split(" ").length-1} Words And {text.length} Characters</p>
-    <h2>Preview:</h2>
-    <h3>{text}</h3>
-  </div>
-  </>
-    
+ </>
   )
 }
-
-
